@@ -5,9 +5,8 @@ import beans.impl.Employe;
 
 import java.util.List;
 
-public class Professeur extends Employe {
+public class Professeur extends Employe implements IProfesseur  {
     private String specialite ;
-    private int id_compte ;
     private List<Element> elements ;
 
     public String getSpecialite() {
@@ -18,11 +17,11 @@ public class Professeur extends Employe {
         this.specialite = specialite;
     }
 
-    public int getId_compte() {
-        return id_compte;
+    public List<Element> getElements() {
+        return elements;
     }
 
-    public void setId_compte(int id_compte) {
-        this.id_compte = id_compte;
+    public void setElements(List<Element> elements) {
+        this.elements = elements;
     }
 }
